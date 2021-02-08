@@ -1,0 +1,16 @@
+{
+  "posts": [
+    {
+      "postId": "7",
+      "userId": "dcbbc0f9-1f7e-404c-9c58-4120b222fc99",
+      "displayName": "jane doe",
+      "title": "ACİL 10 tane denek çin aşısı vuracağız",
+      "description": "öğretmenden temiz kullanılmış çin aşısı",
+      "requirements": "kronik hastalık geçirmemiş 18 yaş üstü",
+      "quota": 10,
+      "deadline": "18/02/2021",
+      "image": "https://online.csp.edu/wp-content/uploads/2018/07/Basic-Psychology-FB.jpg",
+      "users": ["dcbbc0f9-1f7e-404c-9c58-4120b222fc99"]
+    }
+  ]
+}

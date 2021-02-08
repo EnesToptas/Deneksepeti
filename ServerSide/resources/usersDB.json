@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "userId": "1",
+      "displayName": "John Doe",
+      "email": "testersgonnatest@hotmale.com",
+      "password": "12345678"
+    },
+    {
+      "userId": "dcbbc0f9-1f7e-404c-9c58-4120b222fc99",
+      "displayName": "jane doe",
+      "email": "jane24@hotmale.com",
+      "password": "12345678"
+    },
+    {
+      "userId": "7f31bd2f-2785-4012-a98d-668ee42c079b",
+      "displayName": "ahmet mehmet",
+      "email": "keyfe_keder_alayina_giderrr@hotmale.com",
+      "password": "12345678"
+    }
+  ]
+}
