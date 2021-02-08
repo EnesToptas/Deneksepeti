@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/snack_coordinator" android:layout_width="fill_parent" android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:gravity="center_horizontal" android:orientation="vertical" android:focusable="true" android:focusableInTouchMode="true" android:descendantFocusability="beforeDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:id="@+id/backgroundImage" android:layout_width="fill_parent" android:layout_height="0.0dip" android:scaleType="centerCrop" android:adjustViewBounds="true" android:layout_alignParentTop="true" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:srcCompat="@drawable/lab1" />
+
+            <ProgressBar
+                android:id="@+id/loading"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="400dp"
+                android:indeterminateTint="@color/variant"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/backgroundImage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/backgroundImage"
+                tools:visibility="visible" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView android:background="@drawable/scrim" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_alignParentTop="true" />
+        <LinearLayout android:orientation="vertical" android:focusable="true" android:focusableInTouchMode="true" android:descendantFocusability="beforeDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentBottom="true">
+            <androidx.constraintlayout.widget.ConstraintLayout android:gravity="bottom" android:layout_gravity="bottom" android:orientation="vertical" android:id="@+id/login_window_background" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:id="@+id/login_signin"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:descendantFocusability="beforeDescendants"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="60.0dip"
+                            android:background="@drawable/backdrop_gradient"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="16.0dip"
+                                android:layout_marginEnd="16.0dip"
+                                android:text="Sign in to Deneksepeti"
+                                android:textColor="@color/white"
+                                android:textSize="24.0sp"
+                                android:textStyle="normal" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@id/login_window_background"
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.0dip"
+                            android:layout_weight="1.0"
+                            android:background="@color/windowBackground"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/login_form"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12.0dip"
+                                android:layout_marginEnd="12.0dip"
+                                android:layout_marginBottom="5.0dip"
+                                android:descendantFocusability="beforeDescendants"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:orientation="vertical"
+                                android:paddingTop="0.0dip">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/username_input_layout"
+                                    style="@style/Theme.Deneksepeti.EditTextWrapper"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    app:boxBackgroundMode="none"
+                                    app:errorTextAppearance="@style/Theme.Deneksepeti.EditTextError"
+                                    android:theme="@style/Theme.Deneksepeti.LoginActivity">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/username"
+                                        style="@style/Theme.Deneksepeti.EditText"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="Email"
+                                        android:backgroundTint="@color/textColorSecondary"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="textEmailAddress"
+                                        android:theme="@style/Theme.Deneksepeti.LoginActivity"/>
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/password_input_layout"
+                                    style="@style/Theme.Deneksepeti.EditTextWrapper"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    app:boxBackgroundMode="none"
+                                    app:errorTextAppearance="@style/Theme.Deneksepeti.EditTextError"
+                                    app:hintTextAppearance="@style/Theme.Deneksepeti.LoginActivity.Labels"
+                                    android:theme="@style/Theme.Deneksepeti.LoginActivity">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/password"
+                                        style="@style/Theme.Deneksepeti.EditText"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="@string/prompt_password"
+                                        android:imeActionId="100"
+                                        android:imeActionLabel="@string/action_sign_in"
+                                        android:imeOptions="actionGo"
+                                        android:backgroundTint="@color/textColorSecondary"
+                                        android:inputType="textPassword"
+                                        android:theme="@style/Theme.Deneksepeti.LoginActivity"/>
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="4.0dip"
+                                    android:layout_marginTop="16.0dip"
+                                    android:layout_marginBottom="16dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/join_button"
+                                        style="@style/Theme.Deneksepeti.LoginButton"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/login_button_background"
+                                        android:text="Join" />
+
+                                    <TextView
+                                        android:id="@+id/go_button"
+                                        style="@style/Theme.Deneksepeti.LoginButton"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="16.0dip"
+                                        android:background="@drawable/login_go_button_background"
+                                        android:text="Go" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
